@@ -1,16 +1,16 @@
 .SignInDiv {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  width: auto;
-  gap: 5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   cursor: pointer;
-  margin-top: 8px;
   font-weight: 700;
+  margin-right: 10px;
 }
-
-.SignIn {
-  font-weight: bold;
+.SignInDiv i {
+  font-size: 24px;
+}
+.SignInDiv h4 {
+  margin: 0;
 }
 
 .logo {
@@ -20,25 +20,70 @@
 }
 
 .Home {
-  width: 100%;
-  position: relative;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 .Header {
   display: flex;
+  width: 100vw;
   flex-direction: row;
-  height: 70px;
+  align-items: center;
   justify-content: space-between;
-  align-content: center;
+  height: 70px;
+}
+
+.Banner {
+  display: flex;
+  height: 400px;
+  position: relative;
+}
+.Banner img {
+  object-fit: cover;
+  width: 100%;
+}
+.Banner .Banner-description {
+  position: absolute;
+  background-color: white;
+  width: 30%;
+  top: 50%;
+  transform: translateY(calc(-50% - 32px));
+  right: 30px;
+  margin: 32px;
+  padding: 32px;
+  width: 300px;
+}
+.Banner .Banner-description h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+.Banner .Banner-description p {
+  margin-top: 19px;
+  font-size: 1.2rem;
+}
+
+.Footer {
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid #ccc;
+  padding: 32px 0px 24px 0px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 
 * {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
-  position: relative;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../assets/Font/Avenir Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /*# sourceMappingURL=App.css.map */
