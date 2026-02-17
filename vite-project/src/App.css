@@ -1,0 +1,44 @@
+.SignInDiv {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  width: auto;
+  gap: 5px;
+  cursor: pointer;
+  margin-top: 8px;
+  font-weight: 700;
+}
+
+.SignIn {
+  font-weight: bold;
+}
+
+.logo {
+  display: flex;
+  height: 54px;
+  width: 200px;
+}
+
+.Home {
+  width: 100%;
+  position: relative;
+  height: 100%;
+}
+
+.Header {
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  justify-content: space-between;
+  align-content: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/*# sourceMappingURL=App.css.map */
