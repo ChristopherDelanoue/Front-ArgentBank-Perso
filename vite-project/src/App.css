@@ -73,6 +73,23 @@
   bottom: 0;
 }
 
+.features-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+}
+.feature img {
+  border: 10px solid #00bc77;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+}
+
 * {
   margin: 0;
   padding: 0;
