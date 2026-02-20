@@ -26,11 +26,15 @@
 
 .Header {
   display: flex;
+  position: absolute;
   width: 100vw;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  height: 70px;
+  height: 80px;
+  top: 0px;
+  left: 0;
+  background-color: white;
 }
 
 .Banner {
@@ -65,12 +69,14 @@
 
 .Footer {
   display: flex;
+  height: 80px;
   justify-content: center;
+  align-items: center;
   border-top: 2px solid #ccc;
-  padding: 32px 0px 24px 0px;
   position: absolute;
   width: 100%;
   bottom: 0;
+  background-color: white;
 }
 
 .features-container {
@@ -102,6 +108,69 @@
   padding: 0 16px 0 16px;
   text-align: center;
   font-size: 1em;
+}
+
+.content {
+  position: absolute;
+  background-color: #12002b;
+  display: flex;
+  top: 80px;
+  bottom: 80px;
+  width: 100vw;
+  justify-content: center;
+}
+.content .signInContainer {
+  background-color: #ffffff;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  margin: 48px;
+  padding: 32px 32px 32px 32px;
+  height: auto;
+  width: 20%;
+}
+.content .signInContainer i {
+  text-align: center;
+}
+.content .signInContainer h1 {
+  font-size: 2em;
+  margin-top: 22px;
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  color: #213547;
+  font-weight: bold;
+  justify-content: center;
+  height: auto;
+}
+.input-container input {
+  margin-bottom: 16px;
+  padding: 5px;
+}
+
+.button-Container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-Container button {
+  color: white;
+  background-color: #00bc77;
+  border-color: #00bc77;
+  text-decoration: underline;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.CheckBox-Container label {
+  padding-left: 10px;
 }
 
 * {
