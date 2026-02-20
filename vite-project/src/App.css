@@ -5,6 +5,7 @@
   cursor: pointer;
   font-weight: 700;
   margin-right: 10px;
+  text-decoration: none;
 }
 .SignInDiv i {
   font-size: 24px;
@@ -38,38 +39,6 @@
   background-color: white;
 }
 
-.Banner {
-  display: flex;
-  height: 400px;
-  position: relative;
-  top: 0px;
-}
-.Banner img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-.Banner .Banner-description {
-  position: absolute;
-  background-color: white;
-  width: 30%;
-  top: 50%;
-  transform: translateY(calc(-50% - 32px));
-  right: 30px;
-  margin: 32px;
-  padding: 32px;
-  width: 300px;
-}
-.Banner .Banner-description h4 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #2c3e50;
-}
-.Banner .Banner-description p {
-  margin-top: 19px;
-  font-size: 1.2rem;
-}
-
 .Footer {
   display: flex;
   height: 80px;
@@ -82,9 +51,48 @@
   background-color: white;
 }
 
-.features-container {
+.Home-Container {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: 80px;
+  bottom: 80px;
+}
+.Home-Container .Banner {
+  display: flex;
+  height: 50%;
+  width: 100%;
+  position: relative;
+  top: 0px;
+}
+.Home-Container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.Home-Container .Banner-description {
+  position: absolute;
+  background-color: white;
+  width: 30%;
+  top: 50%;
+  transform: translateY(calc(-50% - 32px));
+  right: 30px;
+  margin: 32px;
+  padding: 32px;
+}
+.Home-Container .Banner-description h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+.Home-Container .Banner-description p {
+  margin-top: 19px;
+  font-size: 1.2rem;
+}
+.Home-Container .features-container {
   display: flex;
   flex-direction: row;
+  height: 50%;
   gap: 10px;
 }
 
@@ -164,7 +172,7 @@
 .button-Container button {
   color: white;
   background-color: #00bc77;
-  border-color: #00bc77;
+  border: none;
   text-decoration: underline;
   font-size: 1.1rem;
   font-weight: bold;

@@ -1,8 +1,16 @@
-.Banner
+.Home-Container
   display: flex
-  height: 400px
   position: absolute
-  top: 0px
+  flex-direction: column
+  top: 80px
+  bottom: 80px
+  .Banner
+    img
+    display: flex
+    height: 50%
+    width: 100%
+    position: relative
+    top: 0px
   img
     object-fit: cover
     width: 100%
@@ -16,7 +24,6 @@
     right: 30px
     margin: 32px
     padding: 32px
-    width: 300px
     h4
       font-size: 1.5rem
       font-weight: bold
@@ -24,6 +31,8 @@
     p
       margin-top: 19px
       font-size: 1.2rem
-
-
-
+  .features-container
+    display: flex
+    flex-direction: row
+    height: 50%
+    gap: 10px
