@@ -1,15 +1,28 @@
-import { useState } from 'react'
+
 import './App.css'
-import Home from './Pages/Home'
-import SignIn from './Pages/SignIn'
+import {createBrowserRouter, RouterProvider} from "react-router";
+import Root from '../src/Root.jsx'
+import Home from '../src/Pages/Home.jsx'
+import SignIn from '../src/Pages/SignIn.jsx'
 
 function App() {
-
-  return (
-    <>
-        <SignIn />
-    </>
-  )
+    const router = createBrowserRouter([
+        {
+            path: '/',
+            element: <Root />,
+            children: [
+                {
+                    index: true,
+                    element: <Home/>
+                },
+                {
+                    path: '/signin',
+                    element: <SignIn />
+                }
+            ]
+        }
+    ])
+    return <RouterProvider router={router}/>
 }
 
 export default App

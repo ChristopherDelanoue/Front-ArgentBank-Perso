@@ -1,7 +1,9 @@
+import {NavLink} from "react-router";
+
 function Logo() {
     return (
         <div className="logo">
-            <img src='./public/Image/argentBankLogo.png' alt='logo' />
+            <NavLink to="/"><img src='./public/Image/argentBankLogo.png' alt='logo' /></NavLink>
         </div>
     )
 }
