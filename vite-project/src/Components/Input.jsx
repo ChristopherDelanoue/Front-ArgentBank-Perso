@@ -1,8 +1,8 @@
-function Input({type, title}) {
+function Input({type, title, onChange}) {
     return (
         <div className="input-container">
             <label>{title}</label>
-            <input type={type} />
+            <input type={type} onChange={onChange} />
         </div>
     )
 }
