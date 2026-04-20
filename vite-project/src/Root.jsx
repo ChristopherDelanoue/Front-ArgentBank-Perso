@@ -3,7 +3,6 @@ import Header from "./Container/Header.jsx";
 function Root() {
     return (
         <>
-            <Header />
             <Outlet />
         </>
     )

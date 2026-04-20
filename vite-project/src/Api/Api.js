@@ -9,12 +9,9 @@ export async function apiLogin(email, password) {
 
     const data = await res.json();
 
-    // ✅ stop ici si erreur
     if (!res.ok) {
         throw new Error(data.message || "Login failed");
     }
-
-    // ✅ ici seulement c'est OK
     const token = data.body.token;
     localStorage.setItem("token", token);
     return token;

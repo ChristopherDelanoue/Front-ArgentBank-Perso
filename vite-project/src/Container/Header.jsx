@@ -5,7 +5,7 @@ function Header() {
     return (
         <div className='Header'>
             <Logo />
-            <SignIn />
+            <SignIn name="Sign In" />
         </div>
     )
 }
