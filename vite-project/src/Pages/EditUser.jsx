@@ -1,10 +1,18 @@
 import LogedBanner from "../Container/LogedBanner.jsx";
 import Title from "../Components/Title.jsx";
+import EditUserInput from "../Container/EditUserInput.jsx";
+import Footer from "../Components/Footer.jsx";
+import Operation from "../Components/Operation.jsx";
 function EditUser() {
     return (
         <>
             <LogedBanner />
             <Title title="Edit User Information" />
+            <EditUserInput user="test" last="last test" first="first test" />
+            <Operation nom="test" balance="test balance" montant="123 123 123€" />
+            <Operation nom="test" balance="test balance" montant="123 123 123€" />
+            <Operation nom="test" balance="test balance" montant="123 123 123€" />
+            <Footer />
         </>
 
     )
