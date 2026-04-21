@@ -1,6 +1,12 @@
+import LogedBanner from "../Container/LogedBanner.jsx";
+import Title from "../Components/Title.jsx";
 function EditUser() {
     return (
-        <h1>Edit User</h1>
+        <>
+            <LogedBanner />
+            <Title title="Edit User Information" />
+        </>
+
     )
 }
 
