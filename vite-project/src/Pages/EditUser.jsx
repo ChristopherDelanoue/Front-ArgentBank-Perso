@@ -9,9 +9,7 @@ function EditUser() {
             <LogedBanner />
             <Title title="Edit User Information" />
             <EditUserInput user="test" last="last test" first="first test" />
-            <Operation nom="test" balance="test balance" montant="123 123 123€" />
-            <Operation nom="test" balance="test balance" montant="123 123 123€" />
-            <Operation nom="test" balance="test balance" montant="123 123 123€" />
+            <Operation/>
             <Footer />
         </>
 
