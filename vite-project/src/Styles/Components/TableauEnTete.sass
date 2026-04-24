@@ -8,13 +8,26 @@
   padding: 20px
   color: #2c3e50
   font-size: 22px
+  border-radius: 10px
   span
     flex: 1
     text-align: left
   .col-date
-    flex: 0 0 100px
+    flex: 0 0 140px
   .col-description
     flex: 3
   .col-amount, .col-balance
     flex: 0 0 120px
+    text-align: left
+  .col-chevron
+    flex: 0 0 60px
     text-align: right
+    i
+      transition: transform 0.2s ease-in-out
+      &:hover
+        cursor: pointer
+        transform: rotate(90deg)
+
+.green-bg
+  background-color: rgb(97, 179, 123)
+  color: white

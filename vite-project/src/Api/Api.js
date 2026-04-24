@@ -14,5 +14,6 @@ export async function apiLogin(email, password) {
     }
     const token = data.body.token;
     localStorage.setItem("token", token);
+    console.log(token);
     return token;
 }

@@ -205,7 +205,7 @@
   padding-right: 20px;
 }
 .Loged-Banner-container .log-out a {
-  color: #00bc77;
+  color: rgb(97, 179, 123);
   text-decoration: none;
   font-size: 24px;
   display: flex;
@@ -286,20 +286,37 @@
   padding: 20px;
   color: #2c3e50;
   font-size: 22px;
+  border-radius: 10px;
 }
 .tableau-entete span {
   flex: 1;
   text-align: left;
 }
 .tableau-entete .col-date {
-  flex: 0 0 100px;
+  flex: 0 0 140px;
 }
 .tableau-entete .col-description {
   flex: 3;
 }
 .tableau-entete .col-amount, .tableau-entete .col-balance {
   flex: 0 0 120px;
+  text-align: left;
+}
+.tableau-entete .col-chevron {
+  flex: 0 0 60px;
   text-align: right;
+}
+.tableau-entete .col-chevron i {
+  transition: transform 0.2s ease-in-out;
+}
+.tableau-entete .col-chevron i:hover {
+  cursor: pointer;
+  transform: rotate(90deg);
+}
+
+.green-bg {
+  background-color: rgb(97, 179, 123);
+  color: white;
 }
 
 * {

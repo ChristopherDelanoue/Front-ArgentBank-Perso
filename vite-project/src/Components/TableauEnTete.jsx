@@ -1,11 +1,11 @@
-function TableauEnTete() {
+function TableauEnTete({ date, description, montant, balance, type, categorie, note, isData}) {
     return (
-        <div className='tableau-entete'>
-            <span className="col-date">Date</span>
-            <span className="col-description">Description</span>
-            <span className="col-amount">Amount</span>
-            <span className="col-balance">Balance</span>
-            <span className="col-chevron"></span>
+        <div className={`tableau-entete ${isData ? `green-bg` : ''}`}>
+            <span className="col-date">{date}</span>
+            <span className="col-description">{description}</span>
+            <span className="col-amount">{montant}</span>
+            <span className="col-balance">{balance}</span>
+            <span className="col-chevron">{isData && <i className="fa-solid fa-chevron-right"></i>}</span>
         </div>
     )
 }
