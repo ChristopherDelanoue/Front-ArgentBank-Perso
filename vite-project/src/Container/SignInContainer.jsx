@@ -4,19 +4,26 @@ import Checkbox from '../Components/Checkbox.jsx';
 import {apiLogin} from '../Api/Api.js'
 import {useState} from "react";
 import Header from "./Header.jsx";
-
+import {useDispatch, useSelector} from "react-redux";
+import {useNavigate} from "react-router";
+import {setToken } from "../Pages/SigninSlice.js";
 function SignInContainer() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
 
-    const handleLogin = async() => {
+    const handleLogin = async () => {
         try {
-            await apiLogin(email, password);
-            console.log('connexion reussie');
+            const token = await apiLogin(email, password);
+            dispatch(setToken(token));
+            console.log('Connexion réussie !');
+            navigate('/user');
         } catch (error) {
-            console.log(error);
+            console.log("Erreur :", error.message);
+            alert("Identifiants incorrects");
         }
-    }
+    };
     return (
         <>
             <Header />

@@ -22,7 +22,7 @@ function App() {
                     element: <SignIn />
                 },
                 {
-                    path: '/dev',
+                    path: '/user',
                     element: <EditUser />
                 },
                 {

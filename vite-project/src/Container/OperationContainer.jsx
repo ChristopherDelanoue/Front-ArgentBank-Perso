@@ -10,7 +10,7 @@ function OperationContainer() {
     return (
         <div className="operation-container">
             {compteList.map((item, index) => (
-                <Operation title={item.title} montant={item.montant} balance={item.balance} />
+                <Operation key={index} title={item.title} montant={item.montant} balance={item.balance} />
             ))}
         </div>
     )
