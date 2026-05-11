@@ -6,7 +6,7 @@ const SigninSlice = createSlice({
     initialState: {
         token: localStorage.getItem("token") || null,
         isAuthenticated: !!localStorage.getItem("token"),
-        user: null, // On garde une place pour les infos profil plus tard
+        user: null,
     },
     reducers: {
         setToken: (state, action) => {
