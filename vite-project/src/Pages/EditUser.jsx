@@ -8,11 +8,8 @@ import {Navigate } from "react-router";
 function EditUser() {
 
     const token = useSelector((state) => state.auth.token);
-    console.log("VALEUR DU TOKEN ACTUEL :", JSON.stringify(token));
-
     if (!token || token === "" || token === "undefined") {
-        console.log("Redirection activée !");
-        return <Navigate to="/tokenless" />;
+        return <Navigate to="/" />;
     }
     return (
         <>

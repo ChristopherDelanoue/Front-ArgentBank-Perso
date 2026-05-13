@@ -204,11 +204,12 @@
   gap: 15px;
   padding-right: 20px;
 }
-.Loged-Banner-container .log-out a {
+.Loged-Banner-container .log-out a, .Loged-Banner-container .log-out button {
   color: rgb(97, 179, 123);
   text-decoration: none;
   font-size: 24px;
   display: flex;
+  background-color: transparent;
 }
 
 .title-h1 h1 {

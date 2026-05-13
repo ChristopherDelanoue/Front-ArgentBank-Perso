@@ -17,7 +17,6 @@ function SignInContainer() {
         try {
             const token = await apiLogin(email, password);
             dispatch(setToken(token));
-            console.log('Connexion réussie !');
             navigate('/user');
         } catch (error) {
             console.log("Erreur :", error.message);
