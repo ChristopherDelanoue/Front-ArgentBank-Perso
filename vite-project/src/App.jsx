@@ -6,6 +6,7 @@ import Home from '../src/Pages/Home.jsx'
 import SignIn from '../src/Pages/SignIn.jsx'
 import EditUser from "./Pages/EditUser.jsx";
 import CompteDetail from "./Pages/CompteDetail.jsx";
+import NoLogPage from "./Container/NoLogPage.jsx";
 
 function App() {
     const router = createBrowserRouter([
@@ -28,6 +29,10 @@ function App() {
                 {
                     path: '/devDetail',
                     element: <CompteDetail />
+                },
+                {
+                    path: '/tokenless',
+                    element: <NoLogPage />
                 }
             ]
         }

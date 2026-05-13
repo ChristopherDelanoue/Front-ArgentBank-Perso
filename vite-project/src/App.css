@@ -319,6 +319,24 @@
   color: white;
 }
 
+.noLoginContainer {
+  background-color: #12002b;
+  top: 60px;
+  bottom: 80px;
+  position: absolute;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.noLoginContainer h1 {
+  color: white;
+}
+.noLoginContainer p {
+  color: white;
+}
+
 * {
   margin: 0;
   padding: 0;
