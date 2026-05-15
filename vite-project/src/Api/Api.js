@@ -25,7 +25,18 @@ export async function apiLogin(email, password) {
     }
     const userData = await user.json();
     const userDetails = userData.body;
-    localStorage.setItem("user", JSON.stringify(userDetails));
-    console.log(JSON.stringify(userDetails));
-    return token;
+    return {token: token, user: userDetails};
+}
+
+export async function apiUserInfo(token) {
+    const user = await fetch(`${BASE_URL}/user/profile`, {
+        method: "GET",
+        headers: { "Content-Type": "application/json", authorization: `Bearer ${token}` },
+    })
+    if (!user.ok) {
+        console.log('marche pô');
+    }
+    const userData = await user.json();
+    const userDetails = userData.body;
+    return userDetails
 }
