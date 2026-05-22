@@ -26,14 +26,14 @@ function App() {
                     path: '/user',
                     element: <EditUser />
                 },
-                /*{
+                {
                     path: '/devDetail',
                     element: <CompteDetail />
                 },
                 {
                     path: '/tokenless',
                     element: <NoLogPage />
-                }*/
+                }
             ]
         }
     ])

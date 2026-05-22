@@ -40,3 +40,21 @@ export async function apiUserInfo(token) {
     const userDetails = userData.body;
     return userDetails
 }
+
+export async function apiChangeUserName(token, username) {
+    const response = await fetch(`${BASE_URL}/user/profile`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+            "authorization": `Bearer ${token}`
+        },
+        body: JSON.stringify({ userName: username })
+    });
+
+    if (!response.ok) {
+        throw new Error('Modification du username impossible');
+    }
+
+    const userData = await response.json();
+    return userData.body;
+}

@@ -28,7 +28,7 @@ function EditUser() {
         }
     }, [token, user]);
 
-    if (!token || token === "" || token === "undefined") {
+    if (!token) {
         return <Navigate to="/" />;
     } if (!user) {
         return <div>Loading profile...</div>;
