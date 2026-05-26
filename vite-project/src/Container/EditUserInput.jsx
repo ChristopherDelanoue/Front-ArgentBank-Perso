@@ -8,7 +8,6 @@ import {useNavigate} from "react-router";
 
 function EditUserInput({user, first, last}) {
     const dispatch = useDispatch();
-    const navigate = useNavigate();
     const token = useSelector((state) => state.auth.token);
     const userNameRegister = useSelector((state) => state.auth.user.userName);
     const [username, setUsername] = useState(userNameRegister);
@@ -18,7 +17,6 @@ function EditUserInput({user, first, last}) {
             const update = await apiChangeUserName(token, username);
             const newUserName = update?.body?.userName;
             dispatch(updateUserName(newUserName));
-            setUsername("");
             window.location.reload();
         } catch (error) {
             console.log("Erreur :", error);
