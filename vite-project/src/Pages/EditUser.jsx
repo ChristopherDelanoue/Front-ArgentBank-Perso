@@ -8,6 +8,7 @@ import {Navigate } from "react-router";
 import {apiUserInfo} from "../Api/Api.js";
 import {useEffect} from "react";
 import {setToken} from "./SigninSlice.js";
+import NoLogPage from "../Container/NoLogPage.jsx";
 function EditUser() {
     const dispatch = useDispatch();
     const user = useSelector((state) => state.auth.user);
@@ -29,7 +30,7 @@ function EditUser() {
     }, [token, user]);
 
     if (!token) {
-        return <Navigate to="/" />;
+        return <NoLogPage />
     } if (!user) {
         return <div>Loading profile...</div>;
     }

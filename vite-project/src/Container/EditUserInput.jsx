@@ -4,7 +4,6 @@ import {apiChangeUserName} from "../Api/Api.js";
 import {setToken, updateUserName} from "../Pages/SigninSlice.js";
 import {useDispatch, useSelector} from "react-redux";
 import {useState} from "react";
-import {useNavigate} from "react-router";
 
 function EditUserInput({user, first, last}) {
     const dispatch = useDispatch();
