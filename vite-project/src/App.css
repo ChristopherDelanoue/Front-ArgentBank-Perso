@@ -269,6 +269,9 @@
   flex-direction: column;
   gap: 20px;
 }
+.operation-container :hover {
+  cursor: pointer;
+}
 .operation-container .operation-unitaire {
   width: 90%;
   display: flex;
@@ -296,6 +299,9 @@
   color: #2c3e50;
   font-size: 22px;
   border-radius: 10px;
+}
+.tableau-entete :hover {
+  cursor: pointer;
 }
 .tableau-entete span {
   flex: 1;
