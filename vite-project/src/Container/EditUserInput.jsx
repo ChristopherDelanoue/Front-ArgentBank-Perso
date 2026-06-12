@@ -1,37 +1,49 @@
 import Input from "../Components/Input.jsx";
 import Button from "../Components/Button.jsx";
-import {apiChangeUserName} from "../Api/Api.js";
-import {setToken, updateUserName} from "../Redux/SigninSlice.js";
-import {useDispatch, useSelector} from "react-redux";
-import {useState} from "react";
+import { apiChangeUserName } from "../Api/Api.js";
+import { updateUserName } from "../Redux/SigninSlice.js";
+import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
 
-function EditUserInput({user, first, last}) {
+function EditUserInput({ first, last }) {
     const dispatch = useDispatch();
     const token = useSelector((state) => state.auth.token);
-    const userNameRegister = useSelector((state) => state.auth.user.userName);
-    const [username, setUsername] = useState(userNameRegister);
+
+    const user = useSelector((state) => state.auth.user);
+    const userNameRegister = user?.userName;
+
+    const [username, setUsername] = useState("");
+
     const handleSave = async (e) => {
         try {
             e.preventDefault();
-            const update = await apiChangeUserName(token, username);
-            const newUserName = update?.body?.userName;
+            const valueToSend = username.trim() === "" ? userNameRegister : username;
+            const update = await apiChangeUserName(token, valueToSend);
+            const newUserName = update?.userName;
             dispatch(updateUserName(newUserName));
-            window.location.reload();
+            setUsername("");
         } catch (error) {
             console.log("Erreur :", error);
         }
     };
+
     return (
-        <div className="EditUserContainer">
-            <Input title="User Name: " placeholder={userNameRegister}  onChange={(e) => setUsername(e.target.value)} type="Text"/>
-            <Input title="First Name: " placeholder={first} type="Text" disabled={true}/>
-            <Input title="Last Name: " placeholder={last} type="Text" disabled={true}/>
+        <form className="EditUserContainer" onSubmit={handleSave}>
+            <Input
+                title="User Name: "
+                placeholder={userNameRegister}
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                type="text"
+            />
+            <Input title="First Name: " placeholder={first} type="text" disabled={true}/>
+            <Input title="Last Name: " placeholder={last} type="text" disabled={true}/>
             <div className="button-group">
-                <Button title="Cancel"/>
-                <Button title="Save" onclick={handleSave} />
+                <Button title="Cancel" type="button"/>
+                <Button title="Save" type="submit" />
             </div>
-        </div>
-    )
+        </form>
+    );
 }
 
-    export default EditUserInput;
+export default EditUserInput;
