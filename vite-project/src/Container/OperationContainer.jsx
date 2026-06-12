@@ -1,4 +1,5 @@
 import Operation from "../Components/Operation.jsx";
+import {useNavigate} from "react-router";
 
 function OperationContainer() {
     const compteList = [
@@ -7,10 +8,16 @@ function OperationContainer() {
             {title: "compte trois", montant: "53 098,10€", balance: "Available Balance"}
         ]
 
+    const navigate = useNavigate();
+
+    const redirection = () => {
+        navigate("/devDetail");
+    }
+
     return (
         <div className="operation-container">
             {compteList.map((item, index) => (
-                <Operation key={index} title={item.title} montant={item.montant} balance={item.balance} />
+                <Operation key={index} title={item.title} montant={item.montant} balance={item.balance} onClick={redirection} />
             ))}
         </div>
     )

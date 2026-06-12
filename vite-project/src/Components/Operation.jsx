@@ -1,6 +1,6 @@
-function Operation({title, montant, balance, }) {
+function Operation({title, montant, balance, onClick}) {
     return (
-        <div className="operation-unitaire" >
+        <div className="operation-unitaire" onClick={onClick}>
             <div className="operation-detail">
                 <h3>{title}</h3>
                 <h1>{montant}</h1>
