@@ -1,7 +1,7 @@
 import Input from "../Components/Input.jsx";
 import Button from "../Components/Button.jsx";
 import {apiChangeUserName} from "../Api/Api.js";
-import {setToken, updateUserName} from "../Pages/SigninSlice.js";
+import {setToken, updateUserName} from "../Redux/SigninSlice.js";
 import {useDispatch, useSelector} from "react-redux";
 import {useState} from "react";
 

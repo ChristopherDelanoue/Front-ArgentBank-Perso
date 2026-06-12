@@ -6,7 +6,7 @@ import {useState} from "react";
 import Header from "./Header.jsx";
 import {useDispatch, useSelector} from "react-redux";
 import {useNavigate} from "react-router";
-import {setToken } from "../Pages/SigninSlice.js";
+import {setToken } from "../Redux/SigninSlice.js";
 function SignInContainer() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');

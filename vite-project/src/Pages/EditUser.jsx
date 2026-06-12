@@ -7,7 +7,7 @@ import {useSelector, useDispatch} from "react-redux";
 import {Navigate } from "react-router";
 import {apiUserInfo} from "../Api/Api.js";
 import {useEffect} from "react";
-import {setToken} from "./SigninSlice.js";
+import {setToken} from "../Redux/SigninSlice.js";
 import NoLogPage from "../Container/NoLogPage.jsx";
 function EditUser() {
     const dispatch = useDispatch();
